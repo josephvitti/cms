@@ -534,7 +534,7 @@ class SelscanTool(SelscanBaseTool):
         log.debug(' '.join(toolCmd))
         subprocess.check_call( toolCmd )
 
-    def execute_xpehh(self, tped_file, tped_ref_file, out_file, threads, maf, gap_scale, trunc_ok=False):
+    def execute_xpehh(self, tped_file, tped_ref_file, out_file, out_file2, threads, maf, gap_scale, trunc_ok=False):
         toolCmd = [self.install_and_get_path()]
         toolCmd.append("--xpehh")
         toolCmd.append("--tped")
@@ -543,6 +543,9 @@ class SelscanTool(SelscanBaseTool):
         toolCmd.append(tped_ref_file)
         toolCmd.append("--out")
         toolCmd.append(out_file)
+        toolCmd.append("--out2")
+        toolCmd.append(out_file2)
+
         if trunc_ok:
             toolCmd.append("--trunc-ok")
         if threads > 0:

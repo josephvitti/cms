@@ -339,6 +339,7 @@ def parser_selscan_xpehh(parser=argparse.ArgumentParser()):
     parser = parser_selscan_common(parser)
 
     parser.add_argument("inputRefTped", help="Input tped for the reference population to which the first is compared")
+    parser.add_argument("Output2", help="popihh output for second pop")
 
     parser.add_argument('--truncOk', default=False, action='store_true',
         help="""If an EHH decay reaches the end of a sequence before reaching the cutoff,
@@ -359,6 +360,7 @@ def main_selscan_xpehh(args):
         tped_file       = args.inputTped,
         tped_ref_file   = args.inputRefTped,
         out_file        = args.outFile,
+        out_file2       = args.Output2,
         trunc_ok        = args.truncOk,
         threads         = args.threads,
         maf             = args.maf,
