@@ -29,8 +29,9 @@ from boltons.timeutils import relative_time
 import numpy as np
 
 TOOL_NAME = 'selscan'
-TOOL_VERSION = '1.1.0b'
-url = 'https://github.com/szpiech/selscan/archive/{ver}.zip'
+TOOL_VERSION = 'v0-alpha'#'1.1.0b'
+url = 'https://github.com/josephvitti/selscan/archive/{ver}.zip'
+#'https://github.com/szpiech/selscan/archive/{ver}.zip'
 
 log = logging.getLogger(__name__)
 
