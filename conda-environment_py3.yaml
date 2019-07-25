@@ -2,8 +2,6 @@ name: cms-env3
 channels:
 - bioconda
 - defaults
-source:
-- git_url: git@github.com:josephvitti/selscan.git
 dependencies:
 - python
 - alabaster=0.7.8
